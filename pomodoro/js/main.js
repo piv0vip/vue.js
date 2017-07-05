@@ -18,7 +18,7 @@ new Vue({
     second: 0,
     pomodoroState: POMODORO_STATES.WORK,
     timestamp: 0,
-    imageSrs: ''
+    imageSrc: ''
   },
   computed: {
     title: function(){
