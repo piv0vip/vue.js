@@ -4,7 +4,8 @@ var data = {
     { text: 'Apples', checked: false}
   ],
   title: 'My Shopping List',
-  newItem: ''
+  newItem: '',
+  chislo: 9
 }
 
 var ItemsComponent = Vue.extend({
@@ -60,6 +61,11 @@ var AddItemComponent = Vue.extend({
 Vue.component('items-component', ItemsComponent);
 Vue.component('change-title-component', ChangeTitleComponent);
 Vue.component('add-item-component', AddItemComponent);
+
+Vue.directive('square', function(el, binding){
+  var ttt = Number.parseInt('0'+binding.value);
+  el.innerHTML = Math.pow(ttt, 2);
+})
 
 new Vue({
   el: '#app',
